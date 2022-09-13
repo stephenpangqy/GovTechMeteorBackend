@@ -1,5 +1,5 @@
 # GovTechMeteorBackend
-The repository for TAP 2023 Technical Assessment (Q2)
+The repository for TAP 2023 Technical Assessment (Q2) - Stephen Pang
 
 ## How to Setup
 1. Run the load.sql script to setup the MySQL Database
@@ -21,6 +21,3 @@ This microservice controls the household and family member database, and provide
 3. Assuming that Unit Numbers are unique, regardless of housing type, as the unit number is the primary key of the database.
 
 
-
-Thank you for reading, and do let me know if you have any questions
-- Stephen Pang
