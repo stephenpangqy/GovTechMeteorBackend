@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "b75a7db5-b36c-445c-9249-9f1b18d2e866",
+		"name": "TAP 2023 Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12851475"
+	},
+	"item": [
+		{
+			"name": "Get All Households",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/getAllHouseholds",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getAllHouseholds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Household",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"unit_no\": 45,\r\n    \"housing_type\": \"Condominium\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/createHousehold",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"createHousehold"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Family Member",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"unit_no\": 45,\r\n    \"name\": \"Andi Van Willigan\",\r\n    \"gender\": \"F\",\r\n    \"marital_status\": \"Single\",\r\n    \"spouse_name\": \"\",\r\n    \"occupation_type\": \"Employed\",\r\n    \"annual_income\": 80000,\r\n    \"date_of_birth\": \"1978-12-02\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/addFamilyMember",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"addFamilyMember"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Household (Success)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"unit_no\": 272\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/searchHousehold",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"searchHousehold"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Household (Not Found)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"unit_no\": 33\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/searchHousehold",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"searchHousehold"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Households and Qualifying Members of a Grant",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"grant_name\": \"Multigeneration Scheme\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/getHouseholdsOfGrant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"getHouseholdsOfGrant"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
